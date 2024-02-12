@@ -71,7 +71,7 @@ nav a:hover {
 }
 
 #section1 {
-    background-image: url('/media/pushpins.jpg');
+    background-image: url("media/pushpins.jpg");
     padding: 50vh;
     text-align: center;
     background-size: cover; /* Set background-size to cover */
@@ -95,7 +95,7 @@ section img {
     height: 115%;
     width: 100%;
     top: 0;
-    /*background-image: url(/media/crossTEXTURE.jpg); Undecided on keeping this*/
+    /*background-image: url("media/crossTEXTURE.jpg"); Undecided on keeping this*/
     background-size: cover;
 }
 
@@ -123,7 +123,7 @@ section img {
 }
 
 #rectangle {
-    background-image: url(/media/wt.jpg);
+    background-image: url("media/wt.jpg");
     overflow: hidden;
     border: 1px solid #333;
     border-radius: 6px;
@@ -138,7 +138,7 @@ section img {
   #sect2-notes {
     position: relative;
     display: inline-block;
-    background-image: url(/media/wt.jpg);
+    background-image: url("media/wt.jpg");
     background-size: cover;
 
     width: 72vw;
@@ -194,7 +194,7 @@ section img {
     background-color: #fff;
     color: #333;
     margin-bottom: 10px;
-    background-image: url(/media/wt.jpg);
+    background-image: url("media/wt.jpg");
     border-radius: 80px;
 }
 
@@ -219,7 +219,7 @@ section img {
 }
 
 .modal-body {
-    background-image: url(/media/wt.jpg);
+    background-image: url("media/wt.jpg");
     background-size: cover;
 }
 
@@ -257,7 +257,7 @@ ul.dropdown-menu {
 /*========section 4========*/
 
 #section4 {
-    background-image: url(/media/wt.jpg);
+    background-image: url("media/wt.jpg");
     background-size: cover;
 
 }
@@ -348,7 +348,7 @@ ul.dropdown-menu {
 /*========section 7========*/
 
 #section7 {
-    background-image: url('/media/path.jpg');
+    background-image: url("media/path.jpg");
     background-size: cover;
     background-position: center;
     padding: 50px 0;
@@ -379,7 +379,7 @@ ul.dropdown-menu {
 }
 
 #sidebar {
-    background-image: url(/media/wt.jpg);
+    background-image: url("media/wt.jpg");
     background-size: cover;
 }
 
