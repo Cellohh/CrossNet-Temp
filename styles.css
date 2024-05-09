@@ -15,7 +15,6 @@ header {
     left: 0;
     width: 100%;
     background-color: transparent;
-    color: white;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -25,30 +24,111 @@ header {
 nav {
     display: flex;
     position: fixed;
+    margin-left: -5%;
     top: 0%;
-    left: 83vw;
+    width: 108%;
+    margin-top: -5px;
     font-size: 1.3em;
-    align-items: center;
-    background-color: none;
+    background-color: hsla(0, 0%, 15%, 0.411);
 }
 
 nav a {
     color: #FCD465;
     text-decoration: none;
-    margin-left: 20px;
+    margin-right: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 nav a:hover {
-    color: #333;
     text-decoration: none;
-    margin-left: 20px;
     text-shadow: 12px 12px 8px rgba(0, 0, 0, 0.9);
-    background-color: #fff;
-    border-radius: 20px;
+    background-color: hsla(0, 0%, 80%, 0.273);
+    color: #333;
+    border-radius: 7px;
 }
 
-#prevBtn,
+#sidebarAbout {
+    background-image: url("media/wt.jpg");
+    background-size: cover;
+}
+
+#sidebarLeadership {
+    background-image: url("media/wt.jpg");
+    background-size: cover;
+}
+
+#sidebarResources {
+    background-image: url("media/wt.jpg");
+    background-size: cover;
+    font-size: 0.9rem;
+}
+
+#sidebarResources a {
+    width: 150%;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 5%;
+}
+
+#sidebarResources a:hover {
+    text-transform: uppercase;
+}
+
+#sidebarPartnerships {
+    background-image: url("media/wt.jpg");
+    background-size: cover;
+    font-size: 0.9rem;
+}
+
+.offcanvas-header ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    gap: 10px; /* Adjust the gap between grid items */
+    list-style-type: none; /* Remove the default list style */
+    padding: 0; /* Remove any default padding */
+}
+
+.offcanvas-header li:hover {
+        background-color: #FCD465;
+        border-radius: 10px;
+}
+
+#leader {
+    font-weight: bold;
+}
+
+#leader-title {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.lead-desc {
+    display: inline-block;
+    position: relative;
+    font-size: 0.9rem;
+    padding-right: 10px;
+}
+
+#staff {
+    display: inline-block;
+    position: relative;
+    grid-template-rows: 2;
+}
+
+.offcanvas.offcanvas-top {
+    height: 75vh; /* Set offcanvas height to fill entire viewport */
+}
+
+.offcanvas-body {
+    height: calc(100vh - 56px); /* Adjust the height value as needed */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+
+
+
+/* #prevBtn,
 #nextBtn {
     position: absolute;
     top: 55%;
@@ -58,17 +138,16 @@ nav a:hover {
     padding: 10px;
     border: none;
     cursor: pointer;
-    border-radius: 100%; /* Make it a circle */
-    font-size: 20px; /* Adjust font size as needed */
-}
+    border-radius: 100%; /* Make it a circle 
+}*/
 
-#prevBtn {
+/* #prevBtn {
     left: 10px;
 }
 
 #nextBtn {
     right: 10px;
-}
+} */
 
 #section1 {
     background-image: url("media/pushpins.jpg");
@@ -82,6 +161,52 @@ section img {
     width: 100%;
     height: auto;
 }
+
+/*--------Section 1 Mobile------*/
+
+@media (max-width: 768px) {
+
+    #logo {
+        width: 13.5%;
+        background-color: rgba(4, 4, 4, 0.7); /* White color with 50% opacity */
+        transition: 1.2s ease-in-out;
+        border: 1px solid #333;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0px 4px 58px rgba(0, 0, 0, 0.9); /* Horizontal offset, vertical offset, blur radius, color */
+        border: 1px solid #FCD465;
+
+    }
+
+    nav {
+        display: flex;
+        position: fixed;
+        top: 0%;
+        left: 80vw;
+        font-size: 1.3em;
+        align-items: center;
+        background-color: rgba(4, 4, 4, 0.7); /* White color with 50% opacity */
+        border-radius: 10%;
+        border: 1px solid #FCD465;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9); /* Horizontal offset, vertical offset, blur radius, color */
+        transition: background-color 1.2s ease-in-out;
+
+    }
+
+
+    #section1 {
+        background-image: url("media/pushpins.jpg"); /* Your background image URL */
+        background-size: cover;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: -10%;
+        padding-bottom: 70%;
+        overflow: hidden;
+     
+     }
+}
+
+
 
 /*========END section 1========*/
 /*========END section 1========*/
@@ -99,82 +224,104 @@ section img {
     background-size: cover;
 }
 
-#wwa-wwd h2{
-    display: block;
-    font-size: 1.2em;
-    font-weight: 800;
-    left: -15%;
-    margin-top: 0; 
-}
-
-#wwa-wwd {
-    display: block; /* Change this line */
-    color: #000;
-    word-wrap: wrap;
-    width: 100%;
-    left: 14%;
-    margin-top: -5vh;
-    margin-bottom: 45px; /* Add this line */
-}
-
 #cards-container {
     margin-left: 55%;
     transform: translateX(-50%); /* Center the content horizontally */
 }
 
-#rectangle {
+.rectangle {
     background-image: url("media/wt.jpg");
-    overflow: hidden;
     border: 1px solid #333;
     border-radius: 6px;
     box-shadow: 5px 1px 25px #333; /* Subtle box shadow */
 }
 
-#rectangle:hover {
+.rectangle:hover {
     transition: 0.2s ease-in-out;
     box-shadow: 5px 1px 25px #FCD465; /* Subtle box shadow */
 }
 
-  #sect2-notes {
+#top-3 {
+    margin-left: 22%;
+}
+  
+  
+
+
+/*--------Section 2 Mobile------*/
+
+@media (max-width: 768px) {
+    
+    #cards-container {
+    display: block;
     position: relative;
-    display: inline-block;
-    background-image: url("media/wt.jpg");
-    background-size: cover;
+    right: 5%;
+    }
 
-    width: 72vw;
-    height: 12vh;
-    overflow: hidden;
-    border: 2px solid #333;
-    font-weight: 500;
-    font-size: 0.7em;
-    word-wrap: wrap;
-    left: 50%; /* Center the content horizontally */
-    transform: translateX(-65%); /* Center the content horizontally */
-    margin-top: 48%; /* Adjust the margin-top to push it to the bottom */
-    margin-bottom: -50%; /* Add margin-bottom to create space between it and the next section */
-    padding-top: 5px;
-    top: -85vh;
-    align-self: flex-end;
-    box-shadow: 0 0 5px #333; /* Subtle box shadow */
-    border-radius: 15px 15px;
-}
+    #sect2-notes {
+        position: relative;
+        display: block;
+        background-size: cover;
+        width: 125%;
+        height: 17vh;
+        overflow: hidden;
+        border: 2px solid #333;
+        font-weight: 700;
+        font-size: 0.5em;
+        word-wrap: wrap;
+        right: -25%; /* Center the content horizontally */
+        transform: translateX(-50%); /* Center the content horizontally */
+        margin-top: 48%; /* Adjust the margin-top to push it to the bottom */
+        margin-bottom: -50%; /* Add margin-bottom to create space between it and the next section */
+        padding-top: 5px;
+        top: -30vh;
+        border-radius: 15px 15px;
+    }
 
-#sect2-notes ul {
-    list-style-type: none; /* You can use different values like disc, circle, etc. */
-    color: #000; /* Color of the bullets */
-    padding-left: 1px; /* Add some padding to the left to give space between text and bullets */
-}
- 
+    }
+
 
 /*========END section 2========*/
 /*========END section 2========*/
 
+/*========section 3NEW========*/
+/*========section 3NEW========*/
+
+#section3NEW {
+    background-color: #FCD465;
+}
+
+.title {
+    margin-bottom: 20px; /* Adjust the spacing between titles */
+    width: 50%;
+}
+
+#hand-reaching {
+    position: relative;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+}
+
+/*--------Section 3NEW Mobile------*/
+
+@media (max-width: 768px) {
+    #hand-reaching {
+        position: relative;
+        right: 9.5%;
+    }
+}
+
+/*========END section 3NEW========*/
+/*========END section 3NEW========*/
 
 
-/*========section 3========*/
-/*========section 3========*/
 
-#section3 {
+/*========section 4========*/
+/*========section 4========*/
+
+#section4new {
     background-color: #000000 !important; /* Set the background color of section3 to black with !important */
     padding: 10px;
     width: 100%;
@@ -209,14 +356,21 @@ section img {
     height: auto;
 }
 
-#leader {
-    font-weight: bold;
+.round-yell {
+    height: auto;
+    border-radius: 5%;
+    overflow: hidden;
+    color: #333;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px #333;
 }
 
-#leader-title {
-    font-weight: 500;
+.round-yell:hover {
+    transition: 0.2s ease-in-out;
     font-style: italic;
+    box-shadow: 1px 1px 15px #fff; /* Subtle box shadow */
 }
+
 
 .modal-body {
     background-image: url("media/wt.jpg");
@@ -247,6 +401,26 @@ ul.dropdown-menu {
 
 #cats-dropdown-mctm {
     background-color: #333;
+}
+
+/*--------Section 4 Mobile------*/
+
+@media (max-width: 768px) {
+    #section3-wrapper {
+        display: block;
+        position: relative;
+        left: 8%;
+        }
+
+    #missionary-mobile li {
+        position: relative;
+        font-size: 0.8em;
+        left: 5%;
+        border: 2px solid black;
+        }
+    #card-8-empty {
+        display: none;
+    }
 }
 
 
@@ -304,32 +478,21 @@ ul.dropdown-menu {
     margin-top: 5px;
   }
 
+  /*--------Section 4 Mobile------*/
+
+@media (max-width: 768px) {
+    #church-bones {
+        position: relative;
+        left: 7%;
+    }
+}
+  
+
 /*========END section 4========*/
 /*========END section 4========*/
 
 
-/*========section 5========*/
-/*========section 5========*/
 
-#section5 {
-    background-color: #FCD465;
-}
-
-.title {
-    margin-bottom: 20px; /* Adjust the spacing between titles */
-    line-height: 1.2; /* Limit to one line of space */
-}
-
-#hand-reaching {
-    position: relative;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    border: 2px solid black;
-}
-
-/*========END section 5========*/
-/*========END section 5========*/
 
 
 /*========section 6========*/
@@ -386,7 +549,7 @@ ul.dropdown-menu {
 .offcanvas-body ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-    gap: 10px; /* Adjust the gap between grid items */
+    gap: 5px; /* Adjust the gap between grid items */
     list-style-type: none; /* Remove the default list style */
     padding: 0; /* Remove any default padding */
 }
@@ -396,6 +559,13 @@ ul.dropdown-menu {
         border-radius: 10px;
 }
 
+/*--------Footer Mobile------*/
 
+@media (max-width: 768px) {
+    #footer {
+        position: relative;
+        left: 9%;
+    }
 
+}
 
