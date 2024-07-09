@@ -150,7 +150,7 @@ nav a:hover {
 } */
 
 #section1 {
-    background-image: url("media/pushpins.jpg");
+    background-image: url("media/pushpins3.jpg");
     padding: 50vh;
     text-align: center;
     background-size: cover; /* Set background-size to cover */
@@ -162,51 +162,59 @@ section img {
     height: auto;
 }
 
-/*--------Section 1 Mobile------*/
+/*--------Section 1 300px------*/
 
-@media (max-width: 768px) {
-
-    #logo {
-        width: 13.5%;
-        background-color: rgba(4, 4, 4, 0.7); /* White color with 50% opacity */
-        transition: 1.2s ease-in-out;
-        border: 1px solid #333;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: 0px 4px 58px rgba(0, 0, 0, 0.9); /* Horizontal offset, vertical offset, blur radius, color */
-        border: 1px solid #FCD465;
-
-    }
-
-    nav {
-        display: flex;
-        position: fixed;
-        top: 0%;
-        left: 80vw;
-        font-size: 1.3em;
-        align-items: center;
-        background-color: rgba(4, 4, 4, 0.7); /* White color with 50% opacity */
-        border-radius: 10%;
-        border: 1px solid #FCD465;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9); /* Horizontal offset, vertical offset, blur radius, color */
-        transition: background-color 1.2s ease-in-out;
-
-    }
-
+@media only screen and (max-width: 300px) {
 
     #section1 {
-        background-image: url("media/pushpins.jpg"); /* Your background image URL */
-        background-size: cover;
-        padding-left: 10%;
-        padding-right: 10%;
-        margin-top: -10%;
-        padding-bottom: 70%;
-        overflow: hidden;
-     
-     }
+        background-image: url("media/pushpinsMobile.jpg");
+        padding: 20vh;
+        text-align: center;
+        background-size: cover; /* Set background-size to cover */
+        background-position: center; 
+    }
+    
+    section img {
+        width: 100%;
+        height: auto;
+    }
+   
 }
 
+/*--------Section 1 640px------*/
 
+@media only screen and (max-width: 640px) {
+
+    #section1 {
+        background-image: url("media/pushpins576.jpg");
+        padding: 22vh;
+        text-align: center;
+        background-size: cover; /* Set background-size to cover */
+        background-position: center; 
+    }
+    
+    section img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*--------Section 1 768px------*/
+
+@media only screen and (max-width: 768px) {
+
+    #section1 {
+        background-image: url("media/pushpins576.jpg");
+        text-align: center;
+        background-size: cover; /* Set background-size to cover */
+        background-position: center; 
+    }
+    
+    section img {
+        width: 100%;
+        height: auto;
+    }
+}
 
 /*========END section 1========*/
 /*========END section 1========*/
@@ -214,75 +222,86 @@ section img {
 /*========section 2========*/
 /*========section 2========*/
 
+
+/* Base styles */
 #section2 {
     padding: 70px;
     text-align: center;
     height: 115%;
     width: 100%;
     top: 0;
-    /*background-image: url("media/crossTEXTURE.jpg"); Undecided on keeping this*/
     background-size: cover;
 }
 
 #cards-container {
-    margin-left: 55%;
-    transform: translateX(-50%); /* Center the content horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust as needed */
 }
 
 .rectangle {
     background-image: url("media/wt.jpg");
     border: 1px solid #333;
     border-radius: 6px;
-    box-shadow: 5px 1px 25px #333; /* Subtle box shadow */
+    box-shadow: 5px 1px 25px #333;
+    width: 100%; /* Full width within its column */
+    max-width: 540px;
 }
 
 .rectangle:hover {
     transition: 0.2s ease-in-out;
-    box-shadow: 5px 1px 25px #FCD465; /* Subtle box shadow */
+    box-shadow: 5px 1px 25px #FCD465;
 }
 
 #top-3 {
-    margin-left: 22%;
+    margin-left: 0;
 }
-  
-  
 
+/* Media queries for responsiveness */
 
-/*--------Section 2 Mobile------*/
+/*--------Section 2 Mobile 300px------*/
+@media only screen and (max-width: 300px) {
+    /* Custom styles for 300px screen size */
+}
 
-@media (max-width: 768px) {
-    
-    #cards-container {
-    display: block;
-    position: relative;
-    right: 5%;
+/*--------Section 2 Mobile 640px------*/
+@media only screen and (max-width: 640px) {
+    /* Custom styles for 640px screen size */
+}
+
+/*--------Section 2 Mobile 768px------*/
+@media only screen and (max-width: 768px) {
+    /* Custom styles for 768px screen size */
+}
+
+/*--------Section 2 Mobile 1024px------*/
+@media only screen and (max-width: 1024px) {
+    /* Custom styles for 1024px screen size */
+    .rectangle {
+        max-width: 80%;
     }
+}
 
-    #sect2-notes {
-        position: relative;
-        display: block;
-        background-size: cover;
-        width: 125%;
-        height: 17vh;
-        overflow: hidden;
-        border: 2px solid #333;
-        font-weight: 700;
-        font-size: 0.5em;
-        word-wrap: wrap;
-        right: -25%; /* Center the content horizontally */
-        transform: translateX(-50%); /* Center the content horizontally */
-        margin-top: 48%; /* Adjust the margin-top to push it to the bottom */
-        margin-bottom: -50%; /* Add margin-bottom to create space between it and the next section */
-        padding-top: 5px;
-        top: -30vh;
-        border-radius: 15px 15px;
+/*--------Section 2 Mobile 1280px------*/
+@media only screen and (max-width: 1280px) {
+    /* Custom styles for 1280px screen size */
+    .rectangle {
+        max-width: 70%;
     }
+}
 
+/* Custom styles for larger screens */
+@media only screen and (min-width: 1281px) {
+    .rectangle {
+        max-width: 540px;
     }
+}
 
 
 /*========END section 2========*/
 /*========END section 2========*/
+
 
 /*========section 3NEW========*/
 /*========section 3NEW========*/
@@ -293,67 +312,26 @@ section img {
 
 .title {
     margin-bottom: 20px; /* Adjust the spacing between titles */
-    width: 50%;
+    width: 51%;
 }
 
-#hand-reaching {
+#experientially {
+    display: inline-block;
+    position: relative;
+    right: 30px;
+}
+
+#experientially li {
+    position: relative;
+    left: 25px;
+}
+
+#group-toasting {
     position: relative;
     max-width: 100%;
     width: auto;
     height: auto;
     border: 2px solid black;
-}
-
-/*--------Section 3NEW Mobile------*/
-
-@media (max-width: 768px) {
-    #hand-reaching {
-        position: relative;
-        right: 9.5%;
-    }
-}
-
-/*========END section 3NEW========*/
-/*========END section 3NEW========*/
-
-
-
-/*========section 4========*/
-/*========section 4========*/
-
-#section4new {
-    background-color: #000000 !important; /* Set the background color of section3 to black with !important */
-    padding: 10px;
-    width: 100%;
-    color: #fff; /* Set text color to white for better visibility */
-}
-
-#yellow-dash {
-    color: #FCD465;
-    text-shadow: 0px 1px 5px white, 0px 2px 5px white;
-}
-
-.rounded-box {
-    width: 425px;
-    height: auto;
-    border-radius: 10%;
-    overflow: hidden;
-    background-color: #fff;
-    color: #333;
-    margin-bottom: 10px;
-    background-image: url("media/wt.jpg");
-    border-radius: 80px;
-}
-
-.rounded-box:hover {
-    transition: 0.2s ease-in-out;
-    border: 2px solid #000000;
-    box-shadow: 1px 1px 55px #ffffff; /* Subtle box shadow */
-}
-
-.rounded-box img{
-    width: 70px;
-    height: auto;
 }
 
 .round-yell {
@@ -372,6 +350,126 @@ section img {
 }
 
 
+
+/*--------Section 3 Mobile 300px------*/
+@media only screen and (max-width: 300px) {
+    #group-toasting {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        right: 5%;
+        border: 2px solid black;
+    }
+
+    #toast-title {
+        position: relative;
+        max-width: 100%;
+        right: 8%;
+
+    }
+    #toast-text {
+        position: relative;
+        max-width: 100%;
+        right: 8%;
+
+    }
+}
+
+/*--------Section 3 Mobile 640px------*/
+@media only screen and (max-width: 640px) {
+    #group-toasting {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        right: 5%;
+        border: 2px solid black;
+    }
+
+    #toast-title {
+        position: relative;
+        max-width: 100%;
+        right: 5%;
+
+    }
+    #toast-text {
+        position: relative;
+        max-width: 100%;
+        right: 5%;
+
+    }
+}
+
+/*--------Section 3 Mobile 768px------*/
+@media only screen and (max-width: 768px) {
+    #group-toasting {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        right: 5%;
+        border: 2px solid black;
+    }
+
+    #toast-title {
+        position: relative;
+        max-width: 100%;
+        right: 5%;
+
+    }
+    #toast-text {
+        position: relative;
+        max-width: 100%;
+        right: 5%;
+
+    }
+}
+
+/*========END section 3NEW========*/
+
+
+
+/*========section 4new========*/
+/*========section 4new========*/
+
+#section4new {
+    background-image: url("media/black-lines.png");
+    background-size: 100% 100%;
+    background-color: #000000;
+    padding: 10px;
+    width: 100%;
+    color: #fff; /* Set text color to white for better visibility */
+}
+
+#yellow-dash {
+    color: #FCD465;
+    text-shadow: 0px 1px 5px white, 0px 2px 5px white;
+}
+
+.rounded-box {
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 10px;
+    background-image: url("media/wt.jpg");
+    border-radius: 80px;
+}
+
+.rounded-box:hover {
+    transition: 0.2s ease-in-out;
+    border: 2px solid #000000;
+    box-shadow: 1px 1px 55px #ffffff; /* Subtle box shadow */
+}
+
+.rounded-box img {
+    width: 70px;
+    height: auto;
+}
+
 .modal-body {
     background-image: url("media/wt.jpg");
     background-size: cover;
@@ -382,65 +480,75 @@ section img {
     border-radius: 10px;
 }
 
-.module-style {
-    display: inline-block;
-    font-style: italic;
-    font-weight: 700;
+/*--------Section 4 Mobile 300px------*/
+@media only screen and (max-width: 300px) {
+    #additional-services {
+        font-size: 1.2em;
+    }
+    .rounded-box {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .modal-body {
+        padding: 10px;
+    }
+    .card-title, .card-text {
+        text-align: center;
+    }
+    .learn-more-btn {
+        width: 100%;
+        font-size: 12px;
+    }
 }
 
-#cats-dropdown-101, #cats-dropdown-201, 
-#cats-dropdown-301, #cats-dropdown-401,
-#cats-dropdown-501, #cats-dropdown-601,
-#cats-dropdown-701, #cats-dropdown-801 {
-    background-color: #FCD465;
+/*--------Section 4 Mobile 640px------*/
+@media only screen and (max-width: 640px) {
+    .rounded-box {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .modal-body {
+        padding: 20px;
+    }
+    .card-title, .card-text {
+        text-align: center;
+    }
+    .learn-more-btn {
+        width: 100%;
+    }
 }
 
-ul.dropdown-menu {
-    background-color: #FCD465;
-}
-
-#cats-dropdown-mctm {
-    background-color: #333;
-}
-
-/*--------Section 4 Mobile------*/
-
-@media (max-width: 768px) {
-    #section3-wrapper {
-        display: block;
-        position: relative;
-        left: 8%;
-        }
-
-    #missionary-mobile li {
-        position: relative;
-        font-size: 0.8em;
-        left: 5%;
-        border: 2px solid black;
-        }
-    #card-8-empty {
-        display: none;
+/*--------Section 4 Mobile 768px------*/
+@media only screen and (max-width: 768px) {
+  
+    .modal-body {
+        padding: 20px;
+    }
+    .card-title, .card-text {
+        text-align: center;
+    }
+    .learn-more-btn {
+        width: 100%;
     }
 }
 
 
-/*========END section 3========*/
-/*========END section 3========*/
+/*========END section 4new========*/
 
-/*========section 4========*/
-/*========section 4========*/
-
-#section4 {
+/*========section 5========*/
+/*========section 5========*/
+#section5 {
     background-image: url("media/wt.jpg");
     background-size: cover;
-
 }
 
 #church-bones {
     position: relative;
     height: auto;
     width: 118.5%;
-    left: -20%;
+    left: -15%; /* Adjusted to move the image to the right */
 }
 
 .dash {
@@ -466,30 +574,85 @@ ul.dropdown-menu {
     left: 20%;
 }
 
-  .square-title {
+.square-title {
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
-  }
+}
 
-  .square-text {
+.square-text {
     font-size: 14px;
     color: #777;
     margin-top: 5px;
-  }
+}
 
-  /*--------Section 4 Mobile------*/
-
-@media (max-width: 768px) {
+/*--------Section 5 Mobile 300px------*/
+@media only screen and (max-width: 300px) {
     #church-bones {
+        width: 100%;
+        left: 10%; /* Adjusted to move the image to the right */
+    }
+    #why-cng {
         position: relative;
-        left: 7%;
+        width: 100%;
+        left: 5% !important;
+    }
+    .dash {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .small-square {
+        width: 30px;
+        height: 30px;
+        left: 10%;
+    }
+    .square-title {
+        font-size: 14px;
+    }
+    .square-text {
+        font-size: 12px;
     }
 }
-  
 
-/*========END section 4========*/
-/*========END section 4========*/
+/*--------Section 5 Mobile 640px------*/
+
+@media only screen and (max-width: 640px) {
+    #church-bones {
+        width: 100%;
+        left: 55%; /* Adjusted to move the image to the right */
+    }
+    #why-cng {
+        position: relative;
+        width: 100%;
+        left: 25%;
+    }
+ 
+}
+
+/*--------Section 5 Mobile 768px------*/
+
+@media only screen and (max-width: 768px) {
+    #church-bones {
+        width: 100%;
+        left: 5%; /* Adjusted to move the image to the right */
+    }
+    #why-cng {
+        position: relative;
+        width: 100%;
+        left: 0%;
+    }
+ 
+}
+
+
+/*--------Section 5 Mobile 768px------*/
+@media only screen and (max-width: 768px) {
+
+}
+
+
+/*========END section 5========*/
+/*========END section 5========*/
 
 
 
@@ -501,6 +664,10 @@ ul.dropdown-menu {
 #work-dash {
     color: #FCD465;
     text-shadow: 1px 1px 3px rgb(0, 0, 0), 0px 2px 5px white;
+}
+.img-thumbnail:hover{
+    transition: 0.2s ease-in-out;
+    box-shadow: 5px 1px 25px #FCD465; /* Subtle box shadow */
 }
 
 /*========END section 6========*/
@@ -561,10 +728,10 @@ ul.dropdown-menu {
 
 /*--------Footer Mobile------*/
 
-@media (max-width: 768px) {
+@media (min-width: 576px) {
     #footer {
         position: relative;
-        left: 9%;
+        left: 0%;
     }
 
 }
