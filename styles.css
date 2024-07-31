@@ -462,7 +462,7 @@ section img {
 .rounded-box:hover {
     transition: 0.2s ease-in-out;
     border: 2px solid #000000;
-    box-shadow: 1px 1px 55px #ffffff; /* Subtle box shadow */
+    box-shadow: 1px 1px endif55px #ffffff; /* Subtle box shadow */
 }
 
 .rounded-box img {
